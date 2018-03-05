@@ -30,7 +30,7 @@ public class Workshop {
         return participants;
     }
 
-    public int getNummberOfParticipants(){
+    public int getNumberOfParticipants(){
         return participants.size() > 0 ? participants.size() : 0;
     }
 }

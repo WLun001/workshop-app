@@ -72,7 +72,7 @@ public class AppUI implements IUserInterface {
             for (Workshop workshop : workshops) {
                 System.out.println("Title: " + workshop.getTitle()
                         + "\tMax Participants: " + workshop.getMaxParticipants()
-                        + "\tCurrent Participants: " + workshop.getNummberOfParticipants());
+                        + "\tCurrent Participants: " + workshop.getNumberOfParticipants());
             }
         }
     }
@@ -122,7 +122,7 @@ public class AppUI implements IUserInterface {
         else {
             System.out.println("Title: " + workshop.getTitle()
                     + "\tMax Participants: " + workshop.getMaxParticipants()
-                    + "\tCurrent Participants: " + workshop.getNummberOfParticipants());
+                    + "\tCurrent Participants: " + workshop.getNumberOfParticipants());
         }
 
     }
