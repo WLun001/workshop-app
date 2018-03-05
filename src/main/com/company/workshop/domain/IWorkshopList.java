@@ -1,6 +1,5 @@
 package com.company.workshop.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
 interface IWorkshopList {
