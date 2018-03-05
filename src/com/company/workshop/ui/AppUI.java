@@ -81,10 +81,8 @@ public class AppUI implements IUserInterface {
     private void addParticipant() {
 
         selectWorkshop();
-        Workshop selectedWorkshop = controller.getSelectedWorkshop();
-
         try {
-            if (selectedWorkshop != null) {
+            if (controller.getSelectedWorkshop() != null) {
                 System.out.print("Enter participant name: ");
                 String name = scanner.nextLine();
 
