@@ -1,6 +1,7 @@
 package com.company.workshop.ui;
 
 import com.company.workshop.domain.Controller;
+import com.company.workshop.domain.MaxParticipantsException;
 import com.company.workshop.domain.Participant;
 import com.company.workshop.domain.Workshop;
 
@@ -82,13 +83,17 @@ public class AppUI implements IUserInterface {
         selectWorkshop();
         Workshop selectedWorkshop = controller.getSelectedWorkshop();
 
-        if (selectedWorkshop != null) {
-            System.out.print("Enter participant name: ");
-            String name = scanner.nextLine();
+        try {
+            if (selectedWorkshop != null) {
+                System.out.print("Enter participant name: ");
+                String name = scanner.nextLine();
 
-            controller.addParticipant(name);
-
-            System.out.println();
+                controller.addParticipant(name);
+                System.out.println("Added");
+                System.out.println();
+            }
+        } catch (MaxParticipantsException e){
+            System.out.print(e.getMessage());
         }
     }
 

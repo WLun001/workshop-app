@@ -22,8 +22,10 @@ public class Workshop {
         return maxParticipants;
     }
 
-    public void addParticipant(String name){
-        participants.add(new Participant(name));
+    public void addParticipant(String name) throws MaxParticipantsException {
+        if (participants.size() < maxParticipants) {
+            participants.add(new Participant(name));
+        } else throw new MaxParticipantsException("Reached max number of participants");
     }
 
     public ArrayList<Participant> getParticipants() {

@@ -32,7 +32,7 @@ public class Controller {
         return workshopList.getWorkshopList();
     }
 
-    public void addParticipant(String name){
+    public void addParticipant(String name) throws MaxParticipantsException{
         selectedWorkshop.addParticipant(name);
     }
 }
